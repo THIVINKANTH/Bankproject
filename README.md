@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+First a Fall Why Using React Js ?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React provides state-of-the-art functionality and is an excellent choice for developers looking for an easy-to-use and highly productive JavaScript framework. Using React, you can build complex UI interactions that communicate with the server in record time with JavaScript-driven pages.
 
-## Available Scripts
+How to Implement React Js ?
 
-In the project directory, you can run:
+Created a new folder in where you want your drivers.then Click That folder location connected to command prompt.
+Create react js -That comment is npm install -g create-react-app
+Checking react Version -that comment is create-react-app --version
+Project creation open a folder in vs code. then select terminal — ->new terminal enter the commend -create-react-app bankproject (bankproject that is my file name or project name)
+That time take a few minutes to create a react application and install react dependencies.
+would you like run a program -new terminal -cd folder name(inside a folder in terminal) enter the code npm start program is executed.
+Let’s Start the Project
+My Project is Transaction Customer Use Case
 
-### `npm start`
+My Project based on this diagram and implement the event, exception and validation on login, new customer creation, new transaction creation, transaction filter. eventually login and logout has to done using Session Storage that is my task.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I need some of styles so i’m using Bootstrap, Bootstrap-Icons,MUI-Icons and CSS then i am using Router Dom for path setting.
+Bootstrap and Bootstrap Icons Install in react
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install react-bootstrap bootstrap
+npm install bootstrap-icons
+How to import in files
 
-### `npm test`
+import ‘bootstrap/dist/css/bootstrap.min.css’
+import ‘bootstrap-icons/font/bootstrap-icons.css’
+create a external file for css save filename.css then where you want css design import that file.
+import ‘./Pagedesign.css’
+Router-Dom
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+install — npm install react-router-dom
+Landing Page Creation
 
-### `npm run build`
+A landing page is a website page with a specific purpose — the objective of a landing page is to convert visitors into leads.
+Landing pages contain lead forms that ask visitors for their contact information in exchange for something of value, otherwise known as an offer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I’m giving some Information our bank for Visitors then using Cards for Explaining Loan offers
+Existing Bank Customers who wants to a Loan Applying for online get the loan details then Transaction , Checking your transaction list that is the main part of the project. if you continue with our site click login button then enter the user name and password.
+Landing page out look
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Login Page Creation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The login page allows a user to gain access to an application by entering their username and password or by authenticating using a login.
 
-### `npm run eject`
+I’m using username and password in Session Storage because Session storage allows us to store data in key/value pairs in the browser. The data which we save in session storage will only be persisted in the current browser tab.
+If we close the current tab or browser window, the saved data in session storage will be cleared.
+Login page out Look
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Home page Creation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I’m using Navbar A powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more.
+NavDropdown Items are Create new Account, new Transaction, List All Transactions we will discuss about it upcoming topics.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+And also I’m using one button in navbar that is for Logout button it work as remove the Session Storage.
+If you click the logout button window location assign in landing page.
+Home page out Look
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Array Values and All crud performance activated function
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+List All Transaction
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I have a some transaction list I’m using table for Print the all transaction because The sorting, filtering, and pagination features of tables make it a powerful and declarative tool.
+using useState for the values get and set for List All Transaction and also I’m using map Function for print all values.
 
-### Code Splitting
+Inside the table body using two buttons for Update and Delete the Transaction List’s.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you want to Update some Transaction click the Edit button.
+would you like to delete the transaction click the delete button.
+Both of buttons worked as filter Function.
+New Transaction Creation
 
-### Analyzing the Bundle Size
+Using Form for collect data from the user and send it to the server for further processing.
+I have a set of Fields for new Transaction using in The label attribute specifies the title of the text track.
+The input tag specifies an input field where the user can enter data. The input element is the most important form element. The input element can be displayed in several ways, depending on the type attribute.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The onchange attribute fires the moment when the value of the element is changed.
+The value attribute specifies the value of an input element.
+Using two buttons for Send or Cancel Transaction if you click the button showing alert message.
+If you make new Transaction Completed the entire input fields then click it the send button Showing a alert message for your entire Json fields because using JSON.stringify
+New Transaction out Look
 
-### Making a Progressive Web App
+Router Dom
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The primary goal of Router in React JS is to supply the browser with an asynchronous URL that corresponds to the data that will show on the web page. It is mainly used to create single-page web apps since it retains the application’s regular structure and functionality.
+We wrap our content first with <BrowserRouter>.
+Then we define our <Routes>. An application can have multiple <Routes>. Our basic example only uses one.
+<Route>s can be nested. The first <Route> has a path of / and renders the Layout component.
+The nested <Route>s inherit and add to the parent route. So the blogs path is combined with the parent and becomes /blogs.
 
-### Advanced Configuration
+The Home component route does not have a path but has an index attribute. That specifies this route as the default route for the parent route, which is /.
+Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://github.com/THIVINKANTH/Bankproject.git
